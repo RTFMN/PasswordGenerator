@@ -13,6 +13,7 @@
 		B125C30725D19A5D00AA004C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B125C30525D19A5D00AA004C /* Main.storyboard */; };
 		B125C30925D19A6000AA004C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B125C30825D19A6000AA004C /* Assets.xcassets */; };
 		B125C30C25D19A6000AA004C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B125C30A25D19A6000AA004C /* LaunchScreen.storyboard */; };
+		B154DFDB2636F71A00C60F66 /* PasswordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B154DFDA2636F71A00C60F66 /* PasswordGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B125C30825D19A6000AA004C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B125C30B25D19A6000AA004C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B125C30D25D19A6000AA004C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B154DFDA2636F71A00C60F66 /* PasswordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		B125C2FE25D19A5D00AA004C /* Password Generator */ = {
 			isa = PBXGroup;
 			children = (
+				B125C30D25D19A6000AA004C /* Info.plist */,
 				B125C2FF25D19A5D00AA004C /* AppDelegate.swift */,
 				B125C30125D19A5D00AA004C /* SceneDelegate.swift */,
-				B125C30325D19A5D00AA004C /* ViewController.swift */,
-				B125C30525D19A5D00AA004C /* Main.storyboard */,
 				B125C30825D19A6000AA004C /* Assets.xcassets */,
 				B125C30A25D19A6000AA004C /* LaunchScreen.storyboard */,
-				B125C30D25D19A6000AA004C /* Info.plist */,
+				B154DFD72636F5B800C60F66 /* Model */,
+				B154DFD22636F59900C60F66 /* View */,
+				B154DFD02636F58200C60F66 /* Controller */,
 			);
 			path = "Password Generator";
+			sourceTree = "<group>";
+		};
+		B154DFD02636F58200C60F66 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B125C30325D19A5D00AA004C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B154DFD22636F59900C60F66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B125C30525D19A5D00AA004C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B154DFD72636F5B800C60F66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B154DFDA2636F71A00C60F66 /* PasswordGenerator.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +166,7 @@
 			files = (
 				B125C30425D19A5D00AA004C /* ViewController.swift in Sources */,
 				B125C30025D19A5D00AA004C /* AppDelegate.swift in Sources */,
+				B154DFDB2636F71A00C60F66 /* PasswordGenerator.swift in Sources */,
 				B125C30225D19A5D00AA004C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
