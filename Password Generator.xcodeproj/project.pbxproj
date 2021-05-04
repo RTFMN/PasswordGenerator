@@ -13,6 +13,8 @@
 		B125C30725D19A5D00AA004C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B125C30525D19A5D00AA004C /* Main.storyboard */; };
 		B125C30925D19A6000AA004C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B125C30825D19A6000AA004C /* Assets.xcassets */; };
 		B125C30C25D19A6000AA004C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B125C30A25D19A6000AA004C /* LaunchScreen.storyboard */; };
+		B150197926400D6B004D9B56 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150197826400D6B004D9B56 /* Password.swift */; };
+		B150197B264014ED004D9B56 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150197A264014ED004D9B56 /* ResultViewController.swift */; };
 		B154DFDB2636F71A00C60F66 /* PasswordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B154DFDA2636F71A00C60F66 /* PasswordGenerator.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		B125C30825D19A6000AA004C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B125C30B25D19A6000AA004C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B125C30D25D19A6000AA004C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B150197826400D6B004D9B56 /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		B150197A264014ED004D9B56 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B154DFDA2636F71A00C60F66 /* PasswordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				B125C30325D19A5D00AA004C /* ViewController.swift */,
+				B150197A264014ED004D9B56 /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				B154DFDA2636F71A00C60F66 /* PasswordGenerator.swift */,
+				B150197826400D6B004D9B56 /* Password.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,10 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B150197926400D6B004D9B56 /* Password.swift in Sources */,
 				B125C30425D19A5D00AA004C /* ViewController.swift in Sources */,
 				B125C30025D19A5D00AA004C /* AppDelegate.swift in Sources */,
 				B154DFDB2636F71A00C60F66 /* PasswordGenerator.swift in Sources */,
 				B125C30225D19A5D00AA004C /* SceneDelegate.swift in Sources */,
+				B150197B264014ED004D9B56 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

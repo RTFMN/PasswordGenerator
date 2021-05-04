@@ -10,9 +10,9 @@ import UIKit
 
 struct PasswordGenerator {
     // MARK: - Properties
+    var password : Password?
     var passwordLength: Int = 8
-    var password: String = ""
-    
+
     // MARK - Methods
     mutating func setPasswordLength(passwordLength:Int){
         self.passwordLength = passwordLength
@@ -49,15 +49,15 @@ struct PasswordGenerator {
             passwordString = "Incorrect settings"
         }
 
-        self.password = passwordString
+        password = Password(value: passwordString)
     }
     
     func getPassword() -> String {
-        return password
+        return password?.value ?? "Oops, something go wrong."
     }
     
     func copyPassword(){
         let pasteboard = UIPasteboard.general
-        pasteboard.string = password
+        pasteboard.string = password?.value
     }
 }

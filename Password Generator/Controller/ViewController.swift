@@ -15,9 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lowercaseSwitch: UISwitch!
     @IBOutlet weak var uppercaseSwitch: UISwitch!
     @IBOutlet weak var symbolSwitch: UISwitch!
-    @IBOutlet weak var passwordField: UILabel!
     @IBOutlet weak var generatePasswordButton: UIButton!
-    @IBOutlet weak var copyPasswordButton: UIButton!
     @IBOutlet weak var themeSelector: UISegmentedControl!
     
     // MARK: - Properties
@@ -28,7 +26,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         generatePasswordButton.layer.cornerRadius = 5.0
-        copyPasswordButton.layer.cornerRadius = 5.0
     }
     
     // MARK: - Actions
@@ -52,10 +49,19 @@ class ViewController: UIViewController {
     
     @IBAction func generateButtonPressed(_ sender: UIButton) {
         passwordGenerator.generatePassword(numbersUsed: numberSwitch.isOn, uppercaseUsed: uppercaseSwitch.isOn, lowercaseUsed: lowercaseSwitch.isOn, symbolsUsed: symbolSwitch.isOn)
-        passwordField.text = passwordGenerator.getPassword()
+        
+        self.performSegue(withIdentifier: "goToResult", sender: self)
     }
-
-    @IBAction func copyButtonPressed(_ sender: UIButton) {
-        passwordGenerator.copyPassword()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.passwordGenerator = passwordGenerator
+            destinationVC.password = passwordGenerator.getPassword()
+            destinationVC.numbersUsed = numberSwitch.isOn
+            destinationVC.uppercaseUsed = uppercaseSwitch.isOn
+            destinationVC.lowercaseUsed = lowercaseSwitch.isOn
+            destinationVC.symbolsUsed = symbolSwitch.isOn
+        }
     }
 }
