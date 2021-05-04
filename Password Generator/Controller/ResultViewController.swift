@@ -31,17 +31,16 @@ class ResultViewController: UIViewController {
         settingsButton.layer.cornerRadius = 5.0
         
         passwordLabel.text = password
-        // Do any additional setup after loading the view.
     }
     
     // MARK: - Actions
     @IBAction func copyButtonPressed(_ sender: Any) {
-        passwordGenerator!.copyPassword()
+        passwordGenerator?.copyPassword()
     }
 
     @IBAction func refreshButtonPressed(_ sender: Any) {
-        passwordGenerator!.generatePassword(numbersUsed: numbersUsed!, uppercaseUsed: uppercaseUsed!, lowercaseUsed: lowercaseUsed!, symbolsUsed: symbolsUsed!)
-        passwordLabel.text = passwordGenerator!.getPassword()
+        passwordGenerator?.generatePassword(numbersUsed: numbersUsed!, uppercaseUsed: uppercaseUsed!, lowercaseUsed: lowercaseUsed!, symbolsUsed: symbolsUsed!)
+        passwordLabel.text = passwordGenerator?.getPassword()
     }
     
     @IBAction func settingsButtonPressed(_ sender: Any) {

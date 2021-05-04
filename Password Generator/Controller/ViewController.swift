@@ -20,37 +20,13 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     var passwordGenerator = PasswordGenerator()
+    var themeMode : UIUserInterfaceStyle?
     
     // MARK: - Inherited Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         generatePasswordButton.layer.cornerRadius = 5.0
-    }
-    
-    // MARK: - Actions
-    @IBAction func themeModeSelected(_ sender: Any) {
-        switch (sender as AnyObject).selectedSegmentIndex! {
-        case 0:
-            overrideUserInterfaceStyle = .light
-        case 1:
-            overrideUserInterfaceStyle = .dark
-        case 2:
-            overrideUserInterfaceStyle = .unspecified
-        default:
-            return
-        }
-    }
-    
-    @IBAction func passwordLengthSliderNewValue(_ sender: UISlider) {
-        passwordLengthLabel.text = String(Int(passwordLengthSlider.value))
-        passwordGenerator.setPasswordLength(passwordLength: Int(passwordLengthSlider.value))
-    }
-    
-    @IBAction func generateButtonPressed(_ sender: UIButton) {
-        passwordGenerator.generatePassword(numbersUsed: numberSwitch.isOn, uppercaseUsed: uppercaseSwitch.isOn, lowercaseUsed: lowercaseSwitch.isOn, symbolsUsed: symbolSwitch.isOn)
-        
-        self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -62,6 +38,34 @@ class ViewController: UIViewController {
             destinationVC.uppercaseUsed = uppercaseSwitch.isOn
             destinationVC.lowercaseUsed = lowercaseSwitch.isOn
             destinationVC.symbolsUsed = symbolSwitch.isOn
+            destinationVC.overrideUserInterfaceStyle = themeMode!
         }
+    }
+    
+    // MARK: - Actions
+    @IBAction func themeModeSelected(_ sender: Any) {
+        switch (sender as AnyObject).selectedSegmentIndex! {
+        case 0:
+            themeMode = .light
+        case 1:
+            themeMode = .dark
+        case 2:
+            themeMode = .unspecified
+        default:
+            themeMode = .unspecified
+        }
+        
+        overrideUserInterfaceStyle = themeMode!
+    }
+    
+    @IBAction func passwordLengthSliderNewValue(_ sender: UISlider) {
+        passwordLengthLabel.text = String(Int(passwordLengthSlider.value))
+        passwordGenerator.setPasswordLength(passwordLength: Int(passwordLengthSlider.value))
+    }
+    
+    @IBAction func generateButtonPressed(_ sender: UIButton) {
+        passwordGenerator.generatePassword(numbersUsed: numberSwitch.isOn, uppercaseUsed: uppercaseSwitch.isOn, lowercaseUsed: lowercaseSwitch.isOn, symbolsUsed: symbolSwitch.isOn)
+        
+        self.performSegue(withIdentifier: "goToResult", sender: self)
     }
 }

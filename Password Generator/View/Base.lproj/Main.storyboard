@@ -42,26 +42,26 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z7C-KD-hbp">
                                         <rect key="frame" x="0.0" y="378" width="343" height="356"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="bottom" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wzn-xt-8fr">
+                                            <stackView opaque="NO" contentMode="bottom" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="wzn-xt-8fr">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ego-OH-iUa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="17.333333333333332"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ego-OH-iUa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.666666666666668"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Password Length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lr4-Wr-pdx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="331.66666666666669" height="17.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="332.66666666666669" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOu-JX-XZ6">
-                                                                <rect key="frame" x="332.66666666666669" y="0.0" width="10.333333333333314" height="17.333333333333332"/>
+                                                                <rect key="frame" x="332.66666666666669" y="0.0" width="10.333333333333314" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="8" maxValue="32" translatesAutoresizingMaskIntoConstraints="NO" id="F7X-gw-t9G">
-                                                        <rect key="frame" x="-2" y="27.333333333333314" width="347" height="24.666666666666671"/>
+                                                        <rect key="frame" x="-2" y="20.666666666666686" width="347" height="31.333333333333329"/>
                                                         <connections>
                                                             <action selector="passwordLengthSliderNewValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="H1K-xk-wVT"/>
                                                         </connections>
