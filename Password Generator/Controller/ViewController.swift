@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     // MARK: - Inherited Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        themeMode = UIUserInterfaceStyle.unspecified
         generatePasswordButton.layer.cornerRadius = 5.0
     }
     
